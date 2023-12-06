@@ -1,2 +1,2 @@
-export { debounce } from './utils/debounce';
-export { throttle } from './utils/throttle';
+export declare function debounce(fn: () => void, delay: number): () => void;
+export declare function throttle(fn: () => void, delay: number): () => void;
