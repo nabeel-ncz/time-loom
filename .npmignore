@@ -1,0 +1,9 @@
+__tests__
+*.spec.ts
+*.test.ts
+src
+.babelrc
+.eslintrc
+.vscode
+.idea
+.npmrc
