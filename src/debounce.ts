@@ -1,6 +1,6 @@
 import { AnyFunction } from "./types";
 
-export function debounce(func: AnyFunction, delay: number): AnyFunction {
+export const debounce = (func: AnyFunction, delay: number): AnyFunction => {
     let timeoutId: NodeJS.Timeout;
     return function (...args: any[]): void {
         clearTimeout(timeoutId);
