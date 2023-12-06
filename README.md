@@ -51,5 +51,5 @@ Creates a throttled function.
 ## Author
 
 - **Muhammed Nabeel**
-  - GitHub: [Your GitHub Profile](https://github.com/nabeel-ncz)
-  - LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/muhammed-nabeel-b71279254/)
+  - [GitHub Profile](https://github.com/nabeel-ncz)
+  - [LinkedIn Profile](https://www.linkedin.com/in/muhammed-nabeel-b71279254/)
