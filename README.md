@@ -9,6 +9,7 @@
 
 ```bash
 npm install time-loom
+```
 
 ## Usage
 
@@ -25,6 +26,7 @@ const debouncedFunction = debounce(() => {
 const throttledFunction = throttle(() => {
   // Your function logic here
 }, 1000);
+```
 
 ### API
 
