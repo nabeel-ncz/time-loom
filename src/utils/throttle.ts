@@ -1,4 +1,4 @@
-import { AnyFunction } from "./types";
+import { AnyFunction } from "../types/types";
 
 export const throttle = (func: AnyFunction, interval: number): AnyFunction => {
     let lastExecuted = 0;

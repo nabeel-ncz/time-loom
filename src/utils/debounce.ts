@@ -1,4 +1,4 @@
-import { AnyFunction } from "./types";
+import { AnyFunction } from "../types/types";
 
 export const debounce = (func: AnyFunction, delay: number): AnyFunction => {
     let timeoutId: NodeJS.Timeout;

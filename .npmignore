@@ -1,8 +1,8 @@
 node_modules
-__tests__
+__test__
+src
 *.spec.ts
 *.test.ts
-./src
 .babelrc
 .eslintrc
 .vscode

@@ -15,7 +15,7 @@ npm install time-loom
 
 ```javascript
 
-const { debounce, throttle } = require('time-loom');
+import { debounce, throttle } from "time-loom";
 
 // Example usage of debounce
 const debouncedFunction = debounce(() => {

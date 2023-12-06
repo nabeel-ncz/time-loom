@@ -1,2 +1,2 @@
-export * from './debounce';
-export * from './throttle';
+export * from './utils/debounce';
+export * from './utils/throttle';
