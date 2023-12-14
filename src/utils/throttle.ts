@@ -1,12 +1,41 @@
-import { AnyFunction } from "../types/types";
+import { ThrottleControl, ThrottleOptions } from "../types/throttle";
 
-export const throttle = (func: AnyFunction, interval: number): AnyFunction => {
-    let lastExecuted = 0;
-    return function (...args: any[]): void {
+export function throttle<T extends (...args: any[]) => void>(
+    func: T,
+    wait: number,
+    options: ThrottleOptions = {}
+): T & ThrottleControl {
+    let timeout: NodeJS.Timeout | null = null;
+    let previous = 0;
+
+    const throttled = function (this: any, ...args: Parameters<T>) {
         const now = Date.now();
-        if (now - lastExecuted >= interval) {
+        if (!previous && options.leading === false) previous = now;
+
+        const remaining = wait - (now - previous);
+        if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
+            previous = now;
             func.apply(this, args);
-            lastExecuted = now;
+        } else if (!timeout && options.trailing !== false) {
+            timeout = setTimeout(() => {
+                previous = options.leading === false ? 0 : Date.now();
+                timeout = null;
+                func.apply(this, args);
+            }, remaining);
         }
     };
-};
+
+    throttled.cancel = () => {
+        if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+        }
+        previous = 0;
+    };
+
+    return throttled as T & ThrottleControl;
+}
