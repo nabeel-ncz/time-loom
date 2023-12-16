@@ -38,13 +38,13 @@ Creates a debounced function.
 - `delay`: The delay in milliseconds.
 - `options`: (Optional) Additional options for customization (e.g., { leading: true, trailing: false, maxWait: 1000 }).
 
-### Debounce Function Options:
+#### Debounce Function Options:
 
 - `leading (boolean)`: Whether to execute the function on the leading edge of the timeout (default: false).
 - `trailing (boolean)`: Whether to execute the function on the trailing edge of the timeout (default: true).
 - `maxWait (number)`: The maximum time to wait before triggering the function (default: undefined).
 
-### Debounce Function Methods:
+#### Debounce Function Methods:
 
 - `cancel`: Cancels the scheduled execution of the debounced function.
 - `flush`: Executes the debounced function immediately.
@@ -57,12 +57,12 @@ Creates a throttled function.
 - `delay`: The minimum time between invocations in milliseconds.
 - `options`: (Optional) Additional options for customization (e.g., { leading: false, trailing: true }).
 
-### Throttle Function Options:
+#### Throttle Function Options:
 
 - `leading (boolean)`: Whether to execute the function on the leading edge of the timeout (default: true).
 - `trailing (boolean)`: Whether to execute the function on the trailing edge of the timeout (default: true).
 
-### Throttle Function Methods:
+#### Throttle Function Methods:
 
 - `cancel`: Cancels the scheduled execution of the throttled function.
 
