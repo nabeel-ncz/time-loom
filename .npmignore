@@ -1,8 +1,7 @@
-node_modules
-__test__
-src
-*.spec.ts
-*.test.ts
-.babelrc
-.eslintrc
-.vscode
+node_modules/
+__test__/
+src/
+.gitignore
+tsconfig.json
+README.md
+LICENSE.md
